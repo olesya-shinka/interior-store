@@ -18,15 +18,49 @@ body {
   width: 1280px;
 }
 
+header {
+  position: relative;
+}
+
 header .name {
   font-weight: 600;
   font-size: 40px;
+}
+
+header .icon-cart {
+  float: right;
+  cursor: pointer;
+  transition: color 500ms ease;
+  margin-top: 20px;
+  transition: color, transform 500ms ease;
+}
+
+header .icon-cart:hover,
+header .icon-cart:active {
+  color: rgba(65, 65, 64, 0.867);
+  transform: scale(1.5);
+}
+
+header .cart-shop {
+  position: absolute;
+  float: right;
+  right: 0;
+  top: 50px;
+  width: 400px;
+  min-height: 120px;
+  background-color: rgb(241, 233, 222);
+  -webkit-box-shadow: 26px 22px 20px 6px rgba(90, 101, 110, 0.2);
+  -moz-box-shadow: 26px 22px 20px 6px rgba(90, 101, 110, 0.2);
+  box-shadow: 26px 22px 20px 6px rgba(90, 101, 110, 0.2);
+  z-index: 1000;
+  border-radius: 10px;
 }
 
 header ul.menu {
   float: right;
   list-style: none;
   transition: opasity;
+  margin-top: 20px;
 }
 
 header ul.menu li {
