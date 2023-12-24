@@ -56,6 +56,16 @@ header .cart-shop {
   border-radius: 10px;
 }
 
+header .cart-shop .item-cart {
+  width: 100%;
+}
+
+header .cart-shop .item-cart img {
+  width: 70px;
+  float: left;
+  margin-right: 20px;
+}
+
 header ul.menu {
   float: right;
   list-style: none;

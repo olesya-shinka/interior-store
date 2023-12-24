@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { FaCartShopping } from "react-icons/fa6";
+import { Orders } from "./orders";
 
-export default function Header() {
+export default function Header(props) {
   let [openCart, setOpenCart] = useState(false);
   return (
     <header>
@@ -16,7 +17,13 @@ export default function Header() {
           onClick={() => setOpenCart((openCart = !openCart))}
           className={`icon-cart ${openCart && "active"}`}
         />
-        {openCart && <div className="cart-shop">cart-shop</div>}
+        {openCart && (
+          <div className="cart-shop">
+            {props.orders.map((item) => (
+              <Orders key={item.id} item={item} />
+            ))}
+          </div>
+        )}
       </div>
       <div className="background"></div>
     </header>

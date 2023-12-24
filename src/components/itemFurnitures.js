@@ -9,7 +9,7 @@ export class ItemFurnitures extends Component {
         <p>{this.props.item.description}</p>
         <p>{this.props.item.price} руб.</p>
         <div>
-          <button>Add to Cart</button>
+          <button onClick={() => {this.props.onOrder(this.props.item)}}>Add to Cart</button>
         </div>
       </div>
     );

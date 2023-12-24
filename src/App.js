@@ -8,6 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      orders: [],
       items: [
         {
           id: 1,
@@ -152,18 +153,22 @@ class App extends React.Component {
             "Замечательно функциональный стеллаж, который привлекает внимание необычной формой, а также сочетанием белой глянцевой поверхности с деталями из металла.",
           price: "40.000",
           category: "closets",
-        }
+        },
       ],
     };
+    this.addOrder = this.addOrder.bind(this);
   }
   render() {
     return (
       <div className="Wrapper">
-        <Header />
-        <Furnitures items={this.state.items}/>
+        <Header orders={this.state.orders} />
+        <Furnitures items={this.state.items} onOrder={this.addOrder} />
         <Footer />
       </div>
     );
+  }
+  addOrder(item) {
+    this.setState({ items: [...this.state.orders, item] });
   }
 }
 export default App;
