@@ -2,6 +2,7 @@ import "./index.css";
 import React from "react";
 import Header from "./components/header";
 import { Footer } from "./components/footer";
+import Furnitures from "./components/furnitures";
 
 class App extends React.Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class App extends React.Component {
       items: [
         {
           id: 1,
-          img: "../../public/img/R6.jpeg",
+          img: "R6.jpeg",
           name: "Кровать TATRAN",
           description:
             "Основание из полированной нержавеющей стали, придает оригинальный парящий эффект.",
@@ -19,7 +20,7 @@ class App extends React.Component {
         },
         {
           id: 2,
-          img: "../../public/img/R4.jpeg",
+          img: "R4.jpeg",
           name: "Кресло VILORA",
           description:
             "Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья и приятная на ощупь ткань. ",
@@ -28,7 +29,7 @@ class App extends React.Component {
         },
         {
           id: 3,
-          img: "../../public/img/R5.jpeg",
+          img: "R5.jpeg",
           name: "Стол MENU",
           description:
             "Европейский дуб - отличается особой прочностью и стабильностью.",
@@ -37,7 +38,7 @@ class App extends React.Component {
         },
         {
           id: 4,
-          img: "../../public/img/R2D2.jpeg",
+          img: "R2D2.jpeg",
           name: "Диван ASKESTA",
           description:
             "Благодаря защелкивающемуся механизму диван легко раскладывается в комфортную кровать",
@@ -46,7 +47,7 @@ class App extends React.Component {
         },
         {
           id: 5,
-          img: "../../public/img/R1.jpeg",
+          img: "R1.jpeg",
           name: "Кресло LUNAR",
           description:
             "Прекрасно переносит солнечные лучи, перепады влажности и любые осадки",
@@ -55,7 +56,7 @@ class App extends React.Component {
         },
         {
           id: 6,
-          img: "../../public/img/R3.jpeg",
+          img: "R3.jpeg",
           name: "Шкаф Nastan",
           description:
             "Мебель может быть оснащена разнообразными системами подсветки.",
@@ -64,7 +65,7 @@ class App extends React.Component {
         },
         {
           id: 8,
-          img: "../../public/img/carrera.jpeg",
+          img: "carrera.jpg",
           name: "Кровать с подъемным механизмом Carrera",
           description:
             "Решение для тех, кто предпочитает гармоничное сочетание минимализма и уюта. Кровать, изголовье и основание которой обиты тканью изысканного бежевого цвета, а невысокие ножки сделаны из светлого дерева.",
@@ -73,7 +74,7 @@ class App extends React.Component {
         },
         {
           id: 9,
-          img: "../../public/img/tableSantorini+chairs.jpeg",
+          img: "tableSantorini+chairs.jpg",
           name: "Стол Santorini + 4 стула Renzo",
           description:
             "Комплект мебели, в который входит раскладной стол Santorini (Санторини) и 4 стула Renzo (Рэнцо), с первого взгляда поражает своим изысканным дизайном.",
@@ -82,7 +83,7 @@ class App extends React.Component {
         },
         {
           id: 10,
-          img: "../../public/img/lester.jpeg",
+          img: "lester.jpg",
           name: "Диван Lester угловой, светло-серый",
           description:
             "Угловой диван Lester (Лестер) в светло-серой коже имеет регулируемые подголовники, которые можно установить в комфортное для сидящих положение.",
@@ -91,7 +92,7 @@ class App extends React.Component {
         },
         {
           id: 11,
-          img: "../../public/img/rosy.jpeg",
+          img: "rosy.jpg",
           name: "Комплект мягкой мебели Rosy, бежевый/мята",
           description:
             "Комплект мягкой мебели Rosy (Рози) бежевого цвета. В комплекте представлено три предмета: трехместный диван, двухместный диван и кресло с подушками контрастного мятного оттенка.",
@@ -100,7 +101,7 @@ class App extends React.Component {
         },
         {
           id: 12,
-          img: "../../public/img/savona.jpeg",
+          img: "savona.jpg",
           name: "Диван-трансформер Savona",
           description:
             "Раскладной угловой диван-трансформер Savona (Савона) с обивкой светло-голубого цвета – отличное решение для гостиной, столовой и любой другой комнаты.",
@@ -109,7 +110,7 @@ class App extends React.Component {
         },
         {
           id: 13,
-          img: "../../public/img/dresden.jpeg",
+          img: "dresden.jpg",
           name: "Стол письменный Dresden",
           description:
             "Угловой письменный стол Dresden (Дрезден) выполнен в лучших традициях современного стиля. Универсальная модель, которую можно собрать как с правым углом, так и с левым.",
@@ -118,7 +119,7 @@ class App extends React.Component {
         },
         {
           id: 14,
-          img: "../../public/img/boston.jpeg",
+          img: "boston.jpg",
           name: "Кресло и оттоманка Boston",
           description:
             "Стильное кресло Boston (Бостон) с поворотным механизмом украсит современные интерьеры и лофт-пространства.",
@@ -127,13 +128,31 @@ class App extends React.Component {
         },
         {
           id: 15,
-          img: "../../public/img/sandy.jpeg",
+          img: "sandy.jpg",
           name: "Кресло Sandy",
           description:
             "Кресло Sandy (Сэнди) понравится всем ценителям яркой комфортной мебели.Его обивка изготовлена из ткани кремового оттенка, элегантного и благородного, хорошо гармонирующего с другими цветами.",
           price: "40.000",
           category: "chairs",
         },
+        {
+          id: 16,
+          img: "karen.jpg",
+          name: "Комод-стол Karen",
+          description:
+            "Комод-трансформер Karen может служить в качестве письменного или туалетного столика благодаря выдвижной столешнице. Вторая, накладная столешница вместе с боковой стенкой сдвигается влево, и таким образом традиционный комод превращается в комод-стол.",
+          price: "136.000",
+          category: "closets",
+        },
+        {
+          id: 17,
+          img: "brugge.jpg",
+          name: "Стеллаж Brugge",
+          description:
+            "Замечательно функциональный стеллаж, который привлекает внимание необычной формой, а также сочетанием белой глянцевой поверхности с деталями из металла.",
+          price: "40.000",
+          category: "closets",
+        }
       ],
     };
   }
@@ -141,6 +160,7 @@ class App extends React.Component {
     return (
       <div className="Wrapper">
         <Header />
+        <Furnitures items={this.state.items}/>
         <Footer />
       </div>
     );
