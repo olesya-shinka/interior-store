@@ -5,8 +5,8 @@ export class Furnitures extends Component {
   render() {
     return (
       <main>
-        {this.props.items.map((item) => (
-          <ItemFurnitures key={item.id} item={item} onOrder={this.props.onOrder} />
+        {this.props.items.map(el => (
+          <ItemFurnitures key={el.id} item={el} onOrder={this.props.onOrder} />
         ))}
       </main>
     );

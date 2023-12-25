@@ -43,27 +43,40 @@ header .icon-cart:active {
 
 header .cart-shop {
   position: absolute;
-  float: right;
   right: 0;
   top: 50px;
   width: 400px;
-  min-height: 120px;
+  /* min-height: 200px; */
   background-color: rgb(241, 233, 222);
   -webkit-box-shadow: 26px 22px 20px 6px rgba(90, 101, 110, 0.2);
   -moz-box-shadow: 26px 22px 20px 6px rgba(90, 101, 110, 0.2);
   box-shadow: 26px 22px 20px 6px rgba(90, 101, 110, 0.2);
   z-index: 1000;
   border-radius: 10px;
+  padding: 20px;
+  padding-bottom: 10px;
 }
 
 header .cart-shop .item-cart {
   width: 100%;
+  float: left;
+  margin-bottom: 20px;
 }
 
 header .cart-shop .item-cart img {
   width: 70px;
   float: left;
   margin-right: 20px;
+}
+
+header .cart-shop .item-cart h2{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+header .cart-shop .item-cart p {
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 header ul.menu {
