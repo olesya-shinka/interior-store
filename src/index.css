@@ -45,7 +45,7 @@ header .cart-shop {
   position: absolute;
   right: 0;
   top: 50px;
-  width: 400px;
+  width: 500px;
   /* min-height: 200px; */
   background-color: rgb(241, 233, 222);
   -webkit-box-shadow: 26px 22px 20px 6px rgba(90, 101, 110, 0.2);
@@ -53,7 +53,7 @@ header .cart-shop {
   box-shadow: 26px 22px 20px 6px rgba(90, 101, 110, 0.2);
   z-index: 1000;
   border-radius: 10px;
-  padding: 10px;
+  padding: 15px;
 }
 
 header .cart-shop .item-cart {
@@ -75,6 +75,18 @@ header .cart-shop .item-cart h2{
 header .cart-shop .item-cart p {
   font-size: 14px;
   margin-bottom: 10px;
+}
+
+header .cart-shop .item-cart .delete-icon{
+  float: right;
+  position: relative;
+  bottom: 40px;
+  cursor: pointer;
+  transition: transform 500ms ease;
+}
+
+header .cart-shop .item-cart .delete-icon:hover{
+  transform: scale(1.2);
 }
 
 header ul.menu {
@@ -127,6 +139,13 @@ header .background::before {
   font-size: 20px;
   position: absolute;
   font-weight: 300;
+}
+
+header .sum-order {
+  font-weight: 600;
+  font-size: 18px;
+  float: left;
+  margin-bottom: 20px;
 }
 
 main {

@@ -3,11 +3,16 @@ import { FaCartShopping } from "react-icons/fa6";
 import { Orders } from "./orders";
 
 const showGoods = (props) => {
+  let sum = 0;
+  props.orders.forEach((el) => {
+    sum += Number.parseFloat(el.price);
+  });
   return (
     <div>
       {props.orders.map((el) => (
-        <Orders key={el.id} item={el} />
+        <Orders key={el.id} item={el} onDel={props.onDel} />
       ))}
+      <p className="sum-order">Итого: {sum} 000 руб.</p>
     </div>
   );
 };
