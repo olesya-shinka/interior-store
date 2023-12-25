@@ -168,7 +168,14 @@ class App extends React.Component {
     );
   }
   addOrder(item) {
-    this.setState({ orders: [...this.state.orders, item] });
+    let isInAarr = false;
+    this.state.orders.forEach((order) => {
+      if (order.id === item.id) {
+        isInAarr = true;
+      }
+    });
+
+    if (!isInAarr) this.setState({ orders: [...this.state.orders, item] });
   }
 }
 export default App;

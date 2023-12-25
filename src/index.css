@@ -53,14 +53,12 @@ header .cart-shop {
   box-shadow: 26px 22px 20px 6px rgba(90, 101, 110, 0.2);
   z-index: 1000;
   border-radius: 10px;
-  padding: 20px;
-  padding-bottom: 10px;
+  padding: 10px;
 }
 
 header .cart-shop .item-cart {
   width: 100%;
   float: left;
-  margin-bottom: 20px;
 }
 
 header .cart-shop .item-cart img {
