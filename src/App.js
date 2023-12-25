@@ -3,12 +3,14 @@ import React from "react";
 import Header from "./components/header";
 import { Footer } from "./components/footer";
 import Furnitures from "./components/furnitures";
+import Categories from "./components/categories";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       orders: [],
+      currentCategory: [],
       items: [
         {
           id: 1,
@@ -158,16 +160,36 @@ class App extends React.Component {
     };
     this.addOrder = this.addOrder.bind(this);
     this.deleteGoods = this.deleteGoods.bind(this);
+    this.selectCategory = this.selectCategory.bind(this);
+    this.state.currentCategory = this.state.items;
   }
   render() {
     return (
       <div className="Wrapper">
         <Header orders={this.state.orders} onDel={this.deleteGoods} />
-        <Furnitures items={this.state.items} onOrder={this.addOrder} />
+        <Categories selectCategory={this.selectCategory} />
+        <Furnitures
+          items={this.state.currentCategory}
+          onOrder={this.addOrder}
+        />
         <Footer />
       </div>
     );
   }
+
+  selectCategory(category) {
+    if (category == "all") {
+      this.setState({ currentCategory: this.state.items });
+      return;
+    }
+
+    this.setState({
+      currentCategory: this.state.items.filter(
+        (element) => element.category === category
+      ),
+    });
+  }
+
   addOrder(item) {
     let isInAarr = false;
     this.state.orders.forEach((order) => {

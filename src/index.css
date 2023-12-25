@@ -67,7 +67,7 @@ header .cart-shop .item-cart img {
   margin-right: 20px;
 }
 
-header .cart-shop .item-cart h2{
+header .cart-shop .item-cart h2 {
   font-size: 20px;
   margin-bottom: 10px;
 }
@@ -77,7 +77,7 @@ header .cart-shop .item-cart p {
   margin-bottom: 10px;
 }
 
-header .cart-shop .item-cart .delete-icon{
+header .cart-shop .item-cart .delete-icon {
   float: right;
   position: relative;
   bottom: 40px;
@@ -85,7 +85,7 @@ header .cart-shop .item-cart .delete-icon{
   transition: transform 500ms ease;
 }
 
-header .cart-shop .item-cart .delete-icon:hover{
+header .cart-shop .item-cart .delete-icon:hover {
   transform: scale(1.2);
 }
 
@@ -148,6 +148,24 @@ header .sum-order {
   margin-bottom: 20px;
 }
 
+.categories div {
+  display: inline-block;
+  border-radius: 20px;
+  min-width: 50px;
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 500ms ease;
+  background: rgb(241, 233, 222);
+  margin: 15px;
+  margin-bottom: 25px;
+}
+
+.categories div:hover {
+  transform: scale(1.1);
+  color: rgb(81, 74, 66);
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -182,7 +200,7 @@ main button {
   height: 35px;
   cursor: pointer;
   border-radius: 10px;
-  background-color: rgb(247, 236, 236);
+  background-color: rgb(241, 233, 222);
   font-weight: 600;
   border: 0cap;
   transition: transform 500ms ease;
