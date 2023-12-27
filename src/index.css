@@ -166,6 +166,38 @@ header .sum-order {
   color: rgb(81, 74, 66);
 }
 
+.description {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #8f6e6e78;
+  z-index: 9999;
+  overflow: auto;
+}
+
+.description>div {
+  width: 600px;
+  position: relative;
+  margin: 10% auto;
+  padding: 40px 30px;
+  border-radius: 30px;
+  background: azure;
+
+}
+
+.close-icon {
+  float: right;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 500ms ease;
+}
+
+.close-icon:hover {
+  transform: scale(2);
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -180,10 +212,12 @@ main .item {
   background-color: whitesmoke;
 }
 
-main .item img {
+main .item img,
+.description img {
   border-radius: 10px;
   width: 100%;
   transition: transform 500ms ease;
+  cursor: pointer;
 }
 
 main .item img:hover {
@@ -191,11 +225,14 @@ main .item img:hover {
 }
 
 main h2,
-main p {
+main p,
+.description h2,
+.description p {
   margin: 10px 15px;
 }
 
-main button {
+main button,
+.description button {
   width: 190px;
   height: 35px;
   cursor: pointer;
@@ -206,9 +243,11 @@ main button {
   transition: transform 500ms ease;
 }
 
-main button:hover {
+main button,
+.description button:hover {
   transform: scale(1.06);
 }
+
 
 footer {
   text-align: center;
