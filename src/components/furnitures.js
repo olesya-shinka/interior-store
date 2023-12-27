@@ -6,7 +6,7 @@ export class Furnitures extends Component {
     return (
       <main>
         {this.props.items.map(el => (
-          <ItemFurnitures key={el.id} item={el} onOrder={this.props.onOrder} />
+          <ItemFurnitures key={el.id} item={el} onOrder={this.props.onOrder} showDescriptionItem={this.props.showDescriptionItem} />
         ))}
       </main>
     );

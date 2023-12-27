@@ -4,6 +4,7 @@ import Header from "./components/header";
 import { Footer } from "./components/footer";
 import Furnitures from "./components/furnitures";
 import Categories from "./components/categories";
+import Description from "./components/description";
 
 class App extends React.Component {
   constructor(props) {
@@ -157,11 +158,14 @@ class App extends React.Component {
           category: "closets",
         },
       ],
+      showDescription: false,
+      description: {},
     };
     this.addOrder = this.addOrder.bind(this);
     this.deleteGoods = this.deleteGoods.bind(this);
     this.selectCategory = this.selectCategory.bind(this);
     this.state.currentCategory = this.state.items;
+    this.showDescriptionItem = this.showDescriptionItem.bind(this);
   }
   render() {
     return (
@@ -169,12 +173,25 @@ class App extends React.Component {
         <Header orders={this.state.orders} onDel={this.deleteGoods} />
         <Categories selectCategory={this.selectCategory} />
         <Furnitures
+          showDescriptionItem={this.showDescriptionItem}
           items={this.state.currentCategory}
           onOrder={this.addOrder}
         />
+        {this.state.showDescription && (
+          <Description
+            item={this.state.description}
+            onOrder={this.addOrder}
+            showDescriptionItem={this.showDescriptionItem}
+          />
+        )}
         <Footer />
       </div>
     );
+  }
+
+  showDescriptionItem(item) {
+    this.setState({ description: item });
+    this.setState({ showDescription: !this.state.showDescription });
   }
 
   selectCategory(category) {
